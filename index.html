@@ -92,7 +92,7 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
     <div class="hero-meta-item"><span class="hero-meta-label">Produto</span><span class="hero-meta-val">Arame MIG</span></div>
     <div class="hero-meta-item"><span class="hero-meta-label">Volume Total</span><span class="hero-meta-val">27.000 kg</span></div>
   </div>
-  <div class="hero-badge">Variação de +7,11% no custo total do processo</div>
+  <div class="hero-badge">Variação de +6,96% no custo total do processo</div>
 </div>
 
 <div class="main">
@@ -103,10 +103,10 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
 
   <div id="tab-geral" class="section active">
     <div class="kpi-grid">
-      <div class="kpi-card green"><div class="kpi-label">Volume</div><div class="kpi-val">27.000 kg</div><div class="kpi-sub"></div></div>
+      <div class="kpi-card green"><div class="kpi-label">Volume</div><div class="kpi-val">27.000 kg</div><div class="kpi-sub">Peso Bruto</div></div>
       <div class="kpi-card blue"><div class="kpi-label">Total Aprovado</div><div class="kpi-val">R$ 160.433,93</div><div class="kpi-sub">Estudo K593</div></div>
-      <div class="kpi-card orange"><div class="kpi-label">Realizado</div><div class="kpi-val">R$ 171.844,22</div><div class="kpi-sub">Prévia Atualizada</div></div>
-      <div class="kpi-card red"><div class="kpi-label">Ofensor Principal</div><div class="kpi-val">Despesas Desembaraço</div><div class="kpi-sub"></div></div>
+      <div class="kpi-card orange"><div class="kpi-label">Realizado Final</div><div class="kpi-val">R$ 171.594,22</div><div class="kpi-sub">Sem Lavagem de Container</div></div>
+      <div class="kpi-card red"><div class="kpi-label">Ofensor Principal</div><div class="kpi-val">Desp. Desembaraço</div><div class="kpi-sub">+R$ 10.649,17 vs Plano</div></div>
     </div>
 
     <div class="table-wrap" id="mainTable">
@@ -128,7 +128,7 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
   <div id="tab-unit" class="section">
     <div style="margin-bottom: 24px; padding: 16px; background: var(--green-bg); border: 1px solid var(--green-border); border-radius: 12px;">
         <p style="font-size: 13px; color: var(--green); font-weight: 500;">
-            <strong>Destaque Unitário:</strong> Embora o custo FOB tenha caído devido ao câmbio, o custo final por kg subiu aproximadamente R$ 0,42 devido às taxas portuárias excedentes.
+            <strong>Destaque Unitário:</strong> Custo final por kg (Sem ST) extraído da página 2 dos estudos, refletindo o cenário sem a taxa de lavagem.
         </p>
     </div>
 
@@ -137,24 +137,24 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
       <div class="product-card">
         <div class="product-header">
             <div><div class="product-title">Arame MIG - 1.0mm</div><div class="product-qty">Qtd: 13.500 kg</div></div>
-            <div class="badge up">▲ 7.1%</div>
+            <div class="badge up">▲ 6.93%</div>
         </div>
         <div class="product-stats">
             <div><div class="p-stat-label">Unit. Aprovado (Sem ST)</div><div class="p-stat-val">R$ 6,06</div></div>
-            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,49</div></div>
-            <div class="p-diff">Variação: +R$ 0,43 / kg</div>
+            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,48</div></div>
+            <div class="p-diff">Variação: +R$ 0,42 / kg</div>
         </div>
       </div>
       <!-- Item 2 -->
       <div class="product-card" style="border-left-color: var(--purple);">
         <div class="product-header">
             <div><div class="product-title">Arame MIG - 1.2mm</div><div class="product-qty">Qtd: 13.500 kg</div></div>
-            <div class="badge up">▲ 7.2%</div>
+            <div class="badge up">▲ 7.04%</div>
         </div>
         <div class="product-stats">
             <div><div class="p-stat-label">Unit. Aprovado (Sem ST)</div><div class="p-stat-val">R$ 5,82</div></div>
-            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,24</div></div>
-            <div class="p-diff">Variação: +R$ 0,42 / kg</div>
+            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,23</div></div>
+            <div class="p-diff">Variação: +R$ 0,41 / kg</div>
         </div>
       </div>
     </div>
@@ -162,22 +162,22 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
 </div>
 
 <script>
-// Dados extraídos dos PDFs Estudo K593 e Previa
-const cats=['Produto (FOB)','Impostos (II/IPI/PIS/COF)','Taxa Siscomex','Frete Marítimo','Despesas Desembaraço','Seguro','Frete Rodoviário'];
-const apr=[102343.50, 30707.12, 214.50, 10120.92, 5384.78, 663.11, 11000.00];
-const rea=[95532.66, 29648.71, 154.23, 12842.55, 16283.95, 502.12, 16880.00];
+// Dados Sincronizados com os PDFs (removendo lavagem de 250,00)
+// apr[0] e rea[0] incluem Mercadoria + Frete Internacional para fechar com o VMLD do PDF
+const cats=['Produto (VMLD)','Impostos (DI + Siscomex)','Frete Marítimo (Local)','Despesas Desembaraço','Seguro','Frete Rodoviário'];
+const apr=[109259.50, 30921.62, 3204.92, 5384.78, 663.11, 11000.00];
+const rea=[104767.31, 29802.94, 3607.90, 16033.95, 502.12, 16880.00];
 
 const totalApr = 160433.93;
-const totalReal = 171844.22;
+const totalReal = 171594.22;
 
-// Detalhamento da Seção 4
+// Detalhamento da Seção 4 (Sem a linha de lavagem)
 const despesasDetalhadas = [
     { label: 'AFRMM - Marinha Mercante', a: 669.28, r: 877.83 },
     { label: 'Armazenagem Portuária', a: 2350.00, r: 3304.19 },
     { label: 'EADI / Movimentação / Pesagem', a: 0, r: 1225.57 },
     { label: 'Despachante e SDA', a: 1865.50, r: 2640.00 },
     { label: 'Logística Arizona (Rec/Arm/Exp)', a: 0, r: 7986.36 },
-    { label: 'Lavagem de Container', a: 250.00, r: 250.00 },
     { label: 'Taxas Diversas (Madeira/Correios)', a: 250.00, r: 0 }
 ];
 
@@ -234,7 +234,7 @@ totRow.innerHTML=`
   <span class="val" style="color:var(--blue);font-weight:700">${fmtBRL(totalApr)}</span>
   <span class="val" style="color:var(--red);font-weight:700">${fmtBRL(totalReal)}</span>
   <span class="val" style="color:var(--red);font-weight:700">+${fmtBRL(totalReal-totalApr)}</span>
-  <span><span class="badge up">▲ 7.11%</span></span>
+  <span><span class="badge up">▲ 6.96%</span></span>
 `;
 tw.appendChild(totRow);
 
