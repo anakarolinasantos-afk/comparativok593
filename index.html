@@ -66,7 +66,7 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
 .detail-item{display:grid;grid-template-columns:2.2fr 1fr 1fr;padding:6px 0;border-bottom:1px dashed var(--border);font-size:11px}
 .detail-item:last-child{border-bottom:none}
 .detail-label{color:var(--muted2);font-weight:500}
-.detail-val{text-align:right;font-family:monospace;font-weight:600}
+.detail-val{text-align:right;font-weight:600}
 
 .unit-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-bottom:28px}
 .product-card{background:var(--surface);border:1.5px solid var(--border2);border-radius:16px;padding:24px;border-left:4px solid var(--blue)}
@@ -79,21 +79,20 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
 .p-diff{grid-column:1/-1;margin-top:8px;padding:6px;background:var(--red-bg);border-radius:6px;color:var(--red);font-size:11px;font-weight:600;text-align:center}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes slideDown{from{max-height:0;opacity:0}to{max-height:500px;opacity:1}}
+@keyframes slideDown{from{max-height:0;opacity:0}to{max-height:600px;opacity:1}}
 </style>
 </head>
 <body>
 
 <div class="hero">
   <div class="hero-eyebrow">Relatório de Importação - K593 - FUJIMOTO 09</div>
-  <h1 class="hero-title">Aprovado <span>x</span> Realizado</h1>
+  <h1 class="hero-title">Aprovado <span>x</span> Realizado K593</h1>
   <div class="hero-meta">
-    <div class="hero-meta-item"><span class="hero-meta-label">Cliente</span><span class="hero-meta-val">Fujimoto MG</span></div>
-    <div class="hero-meta-item"><span class="hero-meta-label">Produto</span><span class="hero-meta-val">Arame MIG - ER70S-6</span></div>
-    <div class="hero-meta-item"><span class="hero-meta-label">Câmbio Desembaraço</span><span class="hero-meta-val">R$ 5,0072</span></div>
+    <div class="hero-meta-item"><span class="hero-meta-label">Cliente</span><span class="hero-meta-val">Fujimoto</span></div>
+    <div class="hero-meta-item"><span class="hero-meta-label">Produto</span><span class="hero-meta-val">Arame MIG</span></div>
     <div class="hero-meta-item"><span class="hero-meta-label">Volume Total</span><span class="hero-meta-val">27.000 kg</span></div>
   </div>
-  <div class="hero-badge">Variação de +7,10% no custo total do processo</div>
+  <div class="hero-badge">Variação de +7,11% no custo total do processo</div>
 </div>
 
 <div class="main">
@@ -104,15 +103,15 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
 
   <div id="tab-geral" class="section active">
     <div class="kpi-grid">
-      <div class="kpi-card green"><div class="kpi-label">Volume</div><div class="kpi-val">27.000 kg</div><div class="kpi-sub">Conforme planejado</div></div>
-      <div class="kpi-card blue"><div class="kpi-label">Total Aprovado</div><div class="kpi-val">R$ 160.433,93</div><div class="kpi-sub">Estudo inicial</div></div>
-      <div class="kpi-card orange"><div class="kpi-label">Total Realizado</div><div class="kpi-val">R$ 171.844,22</div><div class="kpi-sub">Custo final apurado</div></div>
-      <div class="kpi-card red"><div class="kpi-label">Ofensor Principal</div><div class="kpi-val">Desp. Desembaraço</div><div class="kpi-sub">+202% vs Aprovado</div></div>
+      <div class="kpi-card green"><div class="kpi-label">Volume</div><div class="kpi-val">27.000 kg</div><div class="kpi-sub"></div></div>
+      <div class="kpi-card blue"><div class="kpi-label">Total Aprovado</div><div class="kpi-val">R$ 160.433,93</div><div class="kpi-sub">Estudo K593</div></div>
+      <div class="kpi-card orange"><div class="kpi-label">Realizado</div><div class="kpi-val">R$ 171.844,22</div><div class="kpi-sub">Prévia Atualizada</div></div>
+      <div class="kpi-card red"><div class="kpi-label">Ofensor Principal</div><div class="kpi-val">Despesas Desembaraço</div><div class="kpi-sub"></div></div>
     </div>
 
     <div class="table-wrap" id="mainTable">
       <div class="table-head">
-        <span>Categoria (Clique p/ detalhar Desp.)</span>
+        <span>Categoria (Clique em Despesas p/ detalhar)</span>
         <span style="text-align:right">Aprovado</span>
         <span style="text-align:right">Realizado</span>
         <span style="text-align:right">Diferença</span>
@@ -129,31 +128,33 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
   <div id="tab-unit" class="section">
     <div style="margin-bottom: 24px; padding: 16px; background: var(--green-bg); border: 1px solid var(--green-border); border-radius: 12px;">
         <p style="font-size: 13px; color: var(--green); font-weight: 500;">
-            <strong>Destaque Positivo:</strong> O custo unitário do produto (FOB) teve uma redução de 6,65%. O aumento no custo final por kg deve-se exclusivamente às taxas portuárias e logísticas.
+            <strong>Destaque Unitário:</strong> Embora o custo FOB tenha caído devido ao câmbio, o custo final por kg subiu aproximadamente R$ 0,42 devido às taxas portuárias excedentes.
         </p>
     </div>
 
     <div class="unit-grid">
+      <!-- Item 1 -->
       <div class="product-card">
         <div class="product-header">
             <div><div class="product-title">Arame MIG - 1.0mm</div><div class="product-qty">Qtd: 13.500 kg</div></div>
-            <div class="badge neutral">Estável</div>
+            <div class="badge up">▲ 7.1%</div>
         </div>
         <div class="product-stats">
-            <div><div class="p-stat-label">Unit. Aprovado (c/ ST)</div><div class="p-stat-val">R$ 5,92</div></div>
-            <div><div class="p-stat-label">Unit. Realizado (c/ ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,49</div></div>
-            <div class="p-diff">Variação: +R$ 0,57 / kg</div>
+            <div><div class="p-stat-label">Unit. Aprovado (Sem ST)</div><div class="p-stat-val">R$ 6,06</div></div>
+            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,49</div></div>
+            <div class="p-diff">Variação: +R$ 0,43 / kg</div>
         </div>
       </div>
-      <div class="product-card">
+      <!-- Item 2 -->
+      <div class="product-card" style="border-left-color: var(--purple);">
         <div class="product-header">
             <div><div class="product-title">Arame MIG - 1.2mm</div><div class="product-qty">Qtd: 13.500 kg</div></div>
-            <div class="badge neutral">Estável</div>
+            <div class="badge up">▲ 7.2%</div>
         </div>
         <div class="product-stats">
-            <div><div class="p-stat-label">Unit. Aprovado (c/ ST)</div><div class="p-stat-val">R$ 5,69</div></div>
-            <div><div class="p-stat-label">Unit. Realizado (c/ ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,24</div></div>
-            <div class="p-diff">Variação: +R$ 0,55 / kg</div>
+            <div><div class="p-stat-label">Unit. Aprovado (Sem ST)</div><div class="p-stat-val">R$ 5,82</div></div>
+            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,24</div></div>
+            <div class="p-diff">Variação: +R$ 0,42 / kg</div>
         </div>
       </div>
     </div>
@@ -161,23 +162,23 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
 </div>
 
 <script>
+// Dados extraídos dos PDFs Estudo K593 e Previa
 const cats=['Produto (FOB)','Impostos (II/IPI/PIS/COF)','Taxa Siscomex','Frete Marítimo','Despesas Desembaraço','Seguro','Frete Rodoviário'];
-// Valores atualizados conforme prints enviados
-const apr=[102343.50, 30706.69, 214.50, 10120.92, 5384.78, 663.11, 11000.00];
-const rea=[95532.66, 29648.71, 154.23, 12842.55, 16283.95, 502.12, 7130.00];
-const totalApr=apr.reduce((a,b)=>a+b,0);
-const totalReal=rea.reduce((a,b)=>a+b,0);
+const apr=[102343.50, 30707.12, 214.50, 10120.92, 5384.78, 663.11, 11000.00];
+const rea=[95532.66, 29648.71, 154.23, 12842.55, 16283.95, 502.12, 16880.00];
 
-// Dados do detalhamento (Prints)
+const totalApr = 160433.93;
+const totalReal = 171844.22;
+
+// Detalhamento da Seção 4
 const despesasDetalhadas = [
     { label: 'AFRMM - Marinha Mercante', a: 669.28, r: 877.83 },
-    { label: 'Armazenagem (Básico)', a: 2350.00, r: 3304.19 },
-    { label: 'Armazenagem EADI / Movimentação', a: 0, r: 1141.57 },
-    { label: 'Pesagem', a: 0, r: 84.00 },
-    { label: 'Despachante / SDA', a: 1865.50, r: 2640.00 },
+    { label: 'Armazenagem Portuária', a: 2350.00, r: 3304.19 },
+    { label: 'EADI / Movimentação / Pesagem', a: 0, r: 1225.57 },
+    { label: 'Despachante e SDA', a: 1865.50, r: 2640.00 },
     { label: 'Logística Arizona (Rec/Arm/Exp)', a: 0, r: 7986.36 },
-    { label: 'Lavagem de CTNR', a: 250.00, r: 250.00 },
-    { label: 'Outros (Correios/Taxa Madeira)', a: 250.00, r: 0 }
+    { label: 'Lavagem de Container', a: 250.00, r: 250.00 },
+    { label: 'Taxas Diversas (Madeira/Correios)', a: 250.00, r: 0 }
 ];
 
 const fmtBRL=v=>'R$ '+v.toLocaleString('pt-BR',{minimumFractionDigits:2,maximumFractionDigits:2});
@@ -198,7 +199,7 @@ cats.forEach((c,i)=>{
   if(c==='Despesas Desembaraço') row.onclick = toggleDespesas;
   
   row.innerHTML=`
-    <span class="cat-name">${c}${c==='Despesas Desembaraço' ? ' ▾' : ''}</span>
+    <span class="cat-name">${c}${c==='Despesas Desembaraço' ? ' <small>(clique p/ abrir)</small>' : ''}</span>
     <span class="val">${fmtBRL(apr[i])}</span>
     <span class="val hi">${fmtBRL(rea[i])}</span>
     <span class="val" style="color:${dc}">${diff>=0?'+':''}${fmtBRL(diff)}</span>
@@ -207,27 +208,21 @@ cats.forEach((c,i)=>{
   `;
   tw.appendChild(row);
 
-  // Se for a linha de despesas, adiciona o container de detalhamento logo abaixo
   if(c==='Despesas Desembaraço') {
       const detail = document.createElement('div');
       detail.className = 'detail-container';
       detail.id = 'despesas-detail';
-      let detailHtml = '<div class="detail-grid">';
-      detailHtml += `<div class="detail-item" style="border-bottom:1px solid var(--muted);margin-bottom:5px;font-weight:700">
-                        <span class="detail-label">Item do Desembaraço</span>
-                        <span class="detail-val">Aprovado</span>
-                        <span class="detail-val">Realizado</span>
-                     </div>`;
+      let dHtml = '<div class="detail-grid">';
+      dHtml += `<div class="detail-item" style="border-bottom:1px solid #ccc; font-weight:700"><span>Item</span><span class="detail-val">Aprovado</span><span class="detail-val">Realizado</span></div>`;
       despesasDetalhadas.forEach(d => {
-          detailHtml += `
-            <div class="detail-item">
-                <span class="detail-label">${d.label}</span>
-                <span class="detail-val" style="color:var(--muted)">${fmtBRL(d.a)}</span>
-                <span class="detail-val" style="color:var(--text)">${fmtBRL(d.r)}</span>
-            </div>`;
+          dHtml += `<div class="detail-item">
+            <span class="detail-label">${d.label}</span>
+            <span class="detail-val" style="color:var(--muted)">${fmtBRL(d.a)}</span>
+            <span class="detail-val">${fmtBRL(d.r)}</span>
+          </div>`;
       });
-      detailHtml += '</div>';
-      detail.innerHTML = detailHtml;
+      dHtml += '</div>';
+      detail.innerHTML = dHtml;
       tw.appendChild(detail);
   }
 });
@@ -239,13 +234,13 @@ totRow.innerHTML=`
   <span class="val" style="color:var(--blue);font-weight:700">${fmtBRL(totalApr)}</span>
   <span class="val" style="color:var(--red);font-weight:700">${fmtBRL(totalReal)}</span>
   <span class="val" style="color:var(--red);font-weight:700">+${fmtBRL(totalReal-totalApr)}</span>
-  <span><span class="badge up">▲ 7.10%</span></span>
+  <span><span class="badge up">▲ 7.11%</span></span>
 `;
 tw.appendChild(totRow);
 
 function toggleDespesas() {
-    const detail = document.getElementById('despesas-detail');
-    detail.classList.toggle('active');
+    const d = document.getElementById('despesas-detail');
+    d.classList.toggle('active');
 }
 
 setTimeout(()=>document.querySelectorAll('.bar-fill').forEach(b=>b.style.width=b.dataset.pct+'%'),300);
@@ -255,8 +250,8 @@ new Chart(document.getElementById('barChart'),{
   data:{
     labels:cats,
     datasets:[
-      {label:'Aprovado',data:apr,backgroundColor:'rgba(37,99,235,0.7)',borderRadius:6},
-      {label:'Realizado',data:rea,backgroundColor:'rgba(234,88,12,0.7)',borderRadius:6}
+      {label:'Aprovado (Estudo)',data:apr,backgroundColor:'rgba(37,99,235,0.7)',borderRadius:6},
+      {label:'Realizado (Prévia)',data:rea,backgroundColor:'rgba(234,88,12,0.7)',borderRadius:6}
     ]
   },
   options:{
