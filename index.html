@@ -85,14 +85,14 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
 <body>
 
 <div class="hero">
-  <div class="hero-eyebrow">Relatório de Importação - K593 - FUJIMOTO 09</div>
+  <div class="hero-eyebrow">Relatório de Importação - K593 - FUJIMOTO 09 (Prévia Atualizada)</div>
   <h1 class="hero-title">Aprovado <span>x</span> Realizado K593</h1>
   <div class="hero-meta">
     <div class="hero-meta-item"><span class="hero-meta-label">Cliente</span><span class="hero-meta-val">Fujimoto</span></div>
     <div class="hero-meta-item"><span class="hero-meta-label">Produto</span><span class="hero-meta-val">Arame MIG</span></div>
     <div class="hero-meta-item"><span class="hero-meta-label">Volume Total</span><span class="hero-meta-val">27.000 kg</span></div>
   </div>
-  <div class="hero-badge">Variação de +6,96% no custo total do processo</div>
+  <div class="hero-badge">Variação de +11,25% no custo total do processo (atualizado c/ Demurrage)</div>
 </div>
 
 <div class="main">
@@ -105,8 +105,8 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
     <div class="kpi-grid">
       <div class="kpi-card green"><div class="kpi-label">Volume</div><div class="kpi-val">27.000 kg</div><div class="kpi-sub">Peso Bruto</div></div>
       <div class="kpi-card blue"><div class="kpi-label">Total Aprovado</div><div class="kpi-val">R$ 160.433,93</div><div class="kpi-sub">Estudo K593</div></div>
-      <div class="kpi-card orange"><div class="kpi-label">Realizado Final</div><div class="kpi-val">R$ 171.594,22</div><div class="kpi-sub">Sem Lavagem de Container</div></div>
-      <div class="kpi-card red"><div class="kpi-label">Ofensor Principal</div><div class="kpi-val">Desp. Desembaraço</div><div class="kpi-sub">+R$ 10.649,17 vs Plano</div></div>
+      <div class="kpi-card orange"><div class="kpi-label">Realizado Final</div><div class="kpi-val">R$ 178.479,97</div><div class="kpi-sub">Prévia Atualizada (+ Demurrage)</div></div>
+      <div class="kpi-card red"><div class="kpi-label">Ofensor Principal</div><div class="kpi-val">Desp. Desembaraço</div><div class="kpi-sub">+R$ 17.534,92 vs Plano</div></div>
     </div>
 
     <div class="table-wrap" id="mainTable">
@@ -130,24 +130,24 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
       <div class="product-card">
         <div class="product-header">
             <div><div class="product-title">Arame MIG - 1.0mm</div><div class="product-qty">Qtd: 13.500 kg</div></div>
-            <div class="badge up">▲ 6.93%</div>
+            <div class="badge up">▲ 11.22%</div>
         </div>
         <div class="product-stats">
             <div><div class="p-stat-label">Unit. Aprovado (Sem ST)</div><div class="p-stat-val">R$ 6,06</div></div>
-            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,48</div></div>
-            <div class="p-diff">Variação: +R$ 0,42 / kg</div>
+            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,74</div></div>
+            <div class="p-diff">Variação: +R$ 0,68 / kg</div>
         </div>
       </div>
       <!-- Item 2 -->
       <div class="product-card" style="border-left-color: var(--purple);">
         <div class="product-header">
             <div><div class="product-title">Arame MIG - 1.2mm</div><div class="product-qty">Qtd: 13.500 kg</div></div>
-            <div class="badge up">▲ 7.04%</div>
+            <div class="badge up">▲ 11.34%</div>
         </div>
         <div class="product-stats">
             <div><div class="p-stat-label">Unit. Aprovado (Sem ST)</div><div class="p-stat-val">R$ 5,82</div></div>
-            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,23</div></div>
-            <div class="p-diff">Variação: +R$ 0,41 / kg</div>
+            <div><div class="p-stat-label">Unit. Realizado (Sem ST)</div><div class="p-stat-val" style="color:var(--red)">R$ 6,48</div></div>
+            <div class="p-diff">Variação: +R$ 0,66 / kg</div>
         </div>
       </div>
     </div>
@@ -155,22 +155,23 @@ body{background:var(--bg);color:var(--text);font-family:'Poppins',sans-serif;min
 </div>
 
 <script>
-// Dados Sincronizados com os PDFs (removendo lavagem de 250,00)
+// Dados Sincronizados com os PDFs (Prévia Atualizada - Demurrage incluída)
 // apr[0] e rea[0] incluem Mercadoria + Frete Internacional para fechar com o VMLD do PDF
 const cats=['Produto (VMLD)','Impostos (DI + Siscomex)','Frete Marítimo (Local)','Despesas Desembaraço','Seguro','Frete Rodoviário'];
 const apr=[109259.50, 30921.62, 3204.92, 5384.78, 663.11, 11000.00];
-const rea=[104767.31, 29802.94, 3607.90, 16033.95, 502.12, 16880.00];
+const rea=[104767.31, 29802.94, 3607.90, 22919.70, 502.12, 16880.00];
 
 const totalApr = 160433.93;
-const totalReal = 171594.22;
+const totalReal = 178479.97;
 
-// Detalhamento da Seção 4 (Sem a linha de lavagem)
+// Detalhamento da Seção 4 (Prévia Atualizada com Demurrage)
 const despesasDetalhadas = [
     { label: 'AFRMM - Marinha Mercante', a: 669.28, r: 877.83 },
     { label: 'Armazenagem Portuária', a: 2350.00, r: 3304.19 },
     { label: 'EADI / Movimentação / Pesagem', a: 0, r: 1225.57 },
     { label: 'Despachante e SDA', a: 1865.50, r: 2640.00 },
     { label: 'Logística Arizona (Rec/Arm/Exp)', a: 0, r: 7986.36 },
+    { label: 'Demurrage (7 dias)', a: 0, r: 6885.75 },
     { label: 'Taxas Diversas (Madeira/Correios)', a: 250.00, r: 0 }
 ];
 
@@ -227,7 +228,7 @@ totRow.innerHTML=`
   <span class="val" style="color:var(--blue);font-weight:700">${fmtBRL(totalApr)}</span>
   <span class="val" style="color:var(--red);font-weight:700">${fmtBRL(totalReal)}</span>
   <span class="val" style="color:var(--red);font-weight:700">+${fmtBRL(totalReal-totalApr)}</span>
-  <span><span class="badge up">▲ 6.96%</span></span>
+  <span><span class="badge up">▲ 11.25%</span></span>
 `;
 tw.appendChild(totRow);
 
@@ -244,7 +245,7 @@ new Chart(document.getElementById('barChart'),{
     labels:cats,
     datasets:[
       {label:'Aprovado (Estudo)',data:apr,backgroundColor:'rgba(37,99,235,0.7)',borderRadius:6},
-      {label:'Realizado (Prévia)',data:rea,backgroundColor:'rgba(234,88,12,0.7)',borderRadius:6}
+      {label:'Realizado (Prévia Atualizada)',data:rea,backgroundColor:'rgba(234,88,12,0.7)',borderRadius:6}
     ]
   },
   options:{
